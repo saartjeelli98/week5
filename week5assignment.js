@@ -110,7 +110,7 @@ class Menu{
     createClient(){
         let name = prompt(`Enter the name of the new client`);
         let age = prompt (`Enter the age of the new client`);
-        this.selectedAppointment.clients.push(new client(name, age));
+        this.selectedAppointment.clients.push(new TattooClient(name, age));
     }
 
 
