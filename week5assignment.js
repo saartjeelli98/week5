@@ -87,10 +87,10 @@ class Menu{
             let selection = this.showApptMenuOptions(description);
             switch(selection){
                 case '1': 
-                    this.createClient;
+                    this.createClient();
                 break;
                 case'2': 
-                    this.deleteClient;
+                    this.deleteClient();
             }
         }
     }
