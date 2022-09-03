@@ -1,7 +1,7 @@
 class TattooClient{
     constructor (name, age){
         this.name = name;
-        this.age = age;
+        this.age = age; //the next step that I would want to try is to only let people who are older than 18 make an appointment
     }
     describe(){
         return `${this.name} is a tattoo client, they are ${this.age} years old.`
@@ -10,8 +10,8 @@ class TattooClient{
 
 class TattooSchedule{
     constructor (day){
-        this.day = day;
-        this.clients = [];
+        this.day = day; //to enter a day of the week
+        this.clients = []; //where the list of client will be stored
     }
 
     addTattooClient(client){
@@ -29,7 +29,7 @@ class TattooSchedule{
 
 class Menu{
     constructor(){
-        this.appointments = [];
+        this.appointments = []; //where the appoinments will be stored. 
         this.selectedAppointment = null;
     }
     
@@ -52,7 +52,7 @@ class Menu{
             }
             selection = this.showMainMenuOptions();
         }
-        alert('Thank you for your interest!');
+        alert('Thank you for your interest!'); //in the event that a user inputs 0 to exit the prompt box.
     }
 
     showMainMenuOptions(){
@@ -76,7 +76,7 @@ class Menu{
 
     showAppt(){
         let index = prompt (`Enter index of the appoinment you would like to view.`);
-        if (index > -1 && index < this.appointments.length){
+        if (index > -1 && index < this.appointments.length){ //used to validate user input, make sure it fits the parameters.
             this.selectedAppointment = this.appointments[index];
             let description = 'Appointment info: ' + this.selectedAppointment.day + '\n';
 
