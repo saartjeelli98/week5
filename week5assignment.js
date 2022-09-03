@@ -78,7 +78,7 @@ class Menu{
         let index = prompt (`Enter index of the appoinment you would like to view.`);
         if (index > -1 && index < this.appointments.length){
             this.selectedAppointment = this.appointments[index];
-            let description = 'Appointment info: ' + this.selectedAppointment.name + '\n';
+            let description = 'Appointment info: ' + this.selectedAppointment.day + '\n';
 
             for  (let i = 0; i < this.selectedAppointment.clients.length ; i++){
                 description += i + ') ' + this.selectedAppointment.clients[i].name + '-' + 
@@ -96,7 +96,7 @@ class Menu{
     }
 
     createAppt(){
-        let date = prompt ('Enter date of appoinment');
+        let date = prompt ('Enter day of the new appoinment');
         this.appointments.push(new TattooSchedule(date));
     }
 
